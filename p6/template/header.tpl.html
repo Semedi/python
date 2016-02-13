@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>{{title}}</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" type="text/css" href="/static/style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <h1>Practica <span class="alternate_colour">6</span></h1>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+% if (s=='index' or s=='fail'):
+          <li class="tab_selected"><a href="/">Principal</a></li>
+          <li><a href="/catalogo">Catalogo</a></li>
+          <li><a href="/gestion">Gestion</a></li>
+          <li><a href="/busqueda">Busqueda</a></li>
+% elif (s=='catalogo') :
+	  <li ><a href="/">Principal</a></li>
+          <li class="tab_selected"><a href="/catalogo">Catalogo</a></li>
+          <li><a href="/gestion">Gestion</a></li>
+          <li><a href="/busqueda">Busqueda</a></li>
+% elif (s=='gestion') :
+	  <li><a href="/">Principal</a></li>
+          <li><a href="/catalogo">Catalogo</a></li>
+          <li class="tab_selected"><a href="/gestion">Gestion</a></li>
+          <li><a href="/busqueda">Busqueda</a></li>
+% elif (s=='busqueda') :
+	  <li><a href="/">Principal</a></li>
+          <li><a href="/catalogo">Catalogo</a></li>
+          <li><a href="/gestion">Gestion</a></li>
+          <li class="tab_selected"><a href="/busqueda">Busqueda</a></li>
+
+
+% end
+
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="panel"><img id="banner" src="/static/style/panel.jpg" alt="banner" /></div>
+      <div class="sidebar">
+        % from bottle import request
+        % if (s=='success'):
+            <p></p>
+        % elif not(request.get_cookie("id")):
+        <section class="loginform">
+          <form name="login" action="/" method="post" accept-charset="utf-8">
+            <ul>
+              <li><label for="usermail">Email</label>
+              <input type="email" name="user" placeholder="yourname@email.com" required></li>
+              <li><label for="password">Password</label>
+              <input type="password" name="password" placeholder="password" required></li>
+              <li> <input type="submit" value="Login"> </li>
+              <li>  <a href="/registro"> Nuevo Usuario</a> </li>
+              <li>  <a href="#"> He olvidado mi contraseña</a> </li>
+            </ul>
+
+          </form>
+        </section>
+        % else:
+            <p><a href="/expire">cerrar sesion </a></p>
+            <p><a href="/"> modificar mis datos </a></p>
+        % end
+      </div>
+      <div id="content">

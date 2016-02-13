@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<body>
+<center><h1>Sign up</h1></center>
+<form action="/signup_totp" method="post">
+  <fieldset>
+    <legend>Datos del usuario:</legend>
+    Nick:<br>
+    <input type="text" name="nickname" value="">
+    <br>
+    Nombre:<br>
+    <input type="text" name="name" value="">
+    <br>
+    País:<br>
+    <input type="text" name="country" value="">
+    <br>
+	Direccion de correo:<br>
+    <input type="text" name="email" value="">
+	<br>
+	Pass:<br>
+    <input type="text" name="password" value="">
+	<br>
+	Repite la pass:<br>
+    <input type="text" name="password2" value="">
+	<br>
+  </fieldset>
+  <input type="submit" value="Confirmar">
+</form>
+
+
+<center><h1>Login</h1></center>
+<form action="/login_totp" method="post">
+  <fieldset>
+    <legend>Datos del usuario:</legend>
+	Nick:<br>
+    <input type="text" name="nickname" value="">
+    <br>
+	Pass:<br>
+    <input type="text" name="password" value="">
+	<br>
+  </fieldset>
+	<input type="submit" value="Confirmar">
+</form>
+
+
+
+
+</body>
+</html>

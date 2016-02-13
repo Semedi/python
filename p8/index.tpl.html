@@ -1,0 +1,73 @@
+<html>
+<head></head>
+<body>
+<center><h1>Agregar/Modificar usuario</h1></center>
+<form action="/insert_or_update" method="post">
+  <fieldset>
+    <legend>Datos del usuario:</legend>
+    Id:<br>
+    <input type="text" name="_id" value="">
+    <br>
+    Pais:<br>
+    <input type="text" name="country" value="">
+    <br>
+    Codigo postal:<br>
+    <input type="text" name="zip" value="">
+    <br>
+	Direccion de correo:<br>
+    <input type="text" name="email" value="">
+	<br>
+	Genero:<br>
+    <input type="text" name="gender" value="">
+	<br>
+	Gustos:<br>
+    <input type="text" name="likes" value="">
+	<br>
+	Password:<br>
+    <input type="text" name="password" value="">
+	<br>
+	Año de nacimiento:<br>
+    <input type="text" name="year" value="">
+  </fieldset>
+  <input type="submit" value="Confirmar">
+</form>
+
+<center><h1>Cambiar direccion de correo</h1></center>
+<form action="/change_email"  method="post">
+  <fieldset>
+    <legend>Datos del usuario:</legend>
+    Id:<br>
+    <input type="text" name="_id" value="">
+    <br>
+	Direccion de correo:<br>
+    <input type="text" name="email" value="">
+  </fieldset>
+  <input type="submit" value="Confirmar">
+</form>
+
+<center><h1>Eliminar usuario</h1></center>
+<form action="/delete" method="post">
+  <fieldset>
+    <legend>Datos del usuario:</legend>
+	<br>
+    Id:<br>
+    <input type="text" name="_id" value="">
+  </fieldset>
+	<input type="submit" value="Confirmar">
+</form>
+
+<center><h1>Eliminar usuarios por año de nacimiento</h1></center>
+<form action="/delete_year"  method="post">
+  <fieldset>
+    <legend>Datos del usuario:</legend>
+	<br>
+    Año de nacimiento:<br>
+    <input type="text" name="year" value="">
+  </fieldset>
+  <input type="submit" value="Confirmar">
+</form>
+
+
+
+</body>
+</html>

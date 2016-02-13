@@ -1,0 +1,10 @@
+{
+	"_id": "user_1",
+	"name": "user_name",
+	"country": "user_country",
+	"email": "username@gmail.com",
+	"password":"kñlasjnnc3487h20",
+	"password2":"kñlasjnnc3487h20",
+	"salt": "'984rqpfq084ijwjnf",
+	"secret": "LDJFB472NDFL635N"
+}

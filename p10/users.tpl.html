@@ -1,0 +1,27 @@
+<html>
+<head><title>tabla</title></head>
+<body>
+
+<h1>users</h1>
+
+<table>
+<tr>
+    %for col in columns:
+        <td>{{col}}</td>
+    %end
+</tr>
+
+
+%for i in rows:
+<tr>
+    %for j in i:
+        <td>{{i[j]}}</td>
+    %end
+</tr>
+%end
+
+
+</table>
+
+</body>
+</html>
